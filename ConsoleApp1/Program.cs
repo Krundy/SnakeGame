@@ -195,6 +195,26 @@ class Program
                     movement = "RIGHT";
 
                     break;
+                
+                case ConsoleKey.W:
+
+                    movement = "UP";
+                    break;
+
+                case ConsoleKey.S:
+
+                    movement = "DOWN";
+                    break;
+
+                case ConsoleKey.A:
+
+                    movement = "LEFT";
+                    break;
+
+                case ConsoleKey.D:
+
+                    movement = "RIGHT";
+                    break;
 
             }
 
