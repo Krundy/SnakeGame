@@ -26,14 +26,6 @@ class Program
 
         Random randomnummer = new Random();
 
-        pixel hoofd = new pixel();
-
-        hoofd.xpos = screenwidth / 2;
-
-        hoofd.ypos = screenheight / 2;
-
-        hoofd.schermkleur = ConsoleColor.Red;
-
         string movement = "RIGHT";
 
         List<int> telje = new List<int>();
@@ -134,7 +126,7 @@ class Program
 
             }
 
-            Console.ForegroundColor =  /* ?? */;
+            Console.ForegroundColor =  ConsoleColor.White;
 
             Console.WriteLine("Score: " + score);
 
@@ -190,7 +182,7 @@ class Program
 
                     movement = "DOWN";
 
-                // ???
+                break
 
                 case ConsoleKey.LeftArrow:
 
@@ -224,7 +216,7 @@ class Program
 
             //Hindernis treffen
 
-            if (hoofd.xPos == obstacleXpos /* ?? */ == obstacleYpos)
+            if (hoofd.xPos == obstacleXpos || hoofd.yPos == obstacleYpos)
 
             {
 
@@ -260,7 +252,7 @@ class Program
 
                 Console.SetCursorPosition(screenwidth / 5, screenheight / 2 + 1);
 
-                Console.WriteLine("Dein Score ist: " + score);
+                Console.WriteLine("Your Score: " + score);
 
                 Console.SetCursorPosition(screenwidth / 5, screenheight / 2 + 2);
 
@@ -328,7 +320,7 @@ public class Obstakel
 
     public int Xpos { get; set; }
 
-    // ?
+    public int Ypos { get; set; }
 
     public ConsoleColor schermKleur { get; set; }
 
